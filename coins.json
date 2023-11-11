@@ -1,1 +1,94 @@
-{"data":[{"coinname":"XRP","amount":108602.5534},{"coinname":"HBAR","amount":126153.0246},{"coinname":"ETH","amount":1.8056},{"coinname":"BTC","amount":0.111},{"coinname":"XLM","amount":30000.908},{"coinname":"EWT","amount":1025.275},{"coinname":"MATIC","amount":4533.2454},{"coinname":"ATOM","amount":280.1172},{"coinname":"LINK","amount":350},{"coinname":"VRA","amount":300000},{"coinname":"DOT","amount":257},{"coinname":"DGB","amount":150000},{"coinname":"XMR","amount":7.1},{"coinname":"ALGO","amount":5000},{"coinname":"SOLO","amount":4511.43},{"coinname":"UNI","amount":0},{"coinname":"XDC","amount":13000},{"coinname":"XI","amount":0},{"coinname":"CORE","amount":941.5688},{"coinname":"KLIMA","amount":48.6695},{"coinname":"MOB","amount":33.3},{"coinname":"INJ","amount":100.502},{"coinname":"GMX","amount":15}]}
+[
+    {
+        "coinname": "XRP",
+        "amount": "108602.5534"
+    },
+    {
+        "coinname": "HBAR",
+        "amount": "126153.0246"
+    },
+    {
+        "coinname": "ETH",
+        "amount": "1.8056"
+    },
+    {
+        "coinname": "BTC",
+        "amount": "0.1110"
+    },
+    {
+        "coinname": "XLM",
+        "amount": "30000.9080"
+    },
+    {
+        "coinname": "EWT",
+        "amount": "1025.2750"
+    },
+    {
+        "coinname": "MATIC",
+        "amount": "4533.2454"
+    },
+    {
+        "coinname": "ATOM",
+        "amount": "280.1172"
+    },
+    {
+        "coinname": "LINK",
+        "amount": "350.0000"
+    },
+    {
+        "coinname": "VRA",
+        "amount": "300000.0000"
+    },
+    {
+        "coinname": "DOT",
+        "amount": "257.0000"
+    },
+    {
+        "coinname": "DGB",
+        "amount": "150000.0000"
+    },
+    {
+        "coinname": "XMR",
+        "amount": "7.1000"
+    },
+    {
+        "coinname": "ALGO",
+        "amount": "5000.0000"
+    },
+    {
+        "coinname": "SOLO",
+        "amount": "4511.4300"
+    },
+    {
+        "coinname": "UNI",
+        "amount": "0.0000"
+    },
+    {
+        "coinname": "XDC",
+        "amount": "13000.0000"
+    },
+    {
+        "coinname": "XI",
+        "amount": "0.0000"
+    },
+    {
+        "coinname": "CORE",
+        "amount": "941.5688"
+    },
+    {
+        "coinname": "KLIMA",
+        "amount": "48.6695"
+    },
+    {
+        "coinname": "MOB",
+        "amount": "33.3000"
+    },
+    {
+        "coinname": "INJ",
+        "amount": "100.5020"
+    },
+    {
+        "coinname": "GMX",
+        "amount": "15.0000"
+    }
+]
