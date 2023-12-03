@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.5" />
+    <title>Kryptowährungsinformationen</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: #121212;
+        color: #fff;
+      }
+      .card {
+        background-color: #1e1e1e;
+        border: none;
+      }
+      .card-header {
+        background-color: #333;
+      }
+      .negative {
+        color: red;
+      }
+      .positive {
+        color: green;
+      }
+    </style>
+  </head>
+  <body onload="RunMainScript()">
+    <script type="text/javascript" src="priceHistory.js"></script>
+
+    <div class="container mt-4">
+      <div class="row" id="cards-container">
+        <!-- Hier werden die Karten eingefügt -->
+      </div>
+    </div>
+  </body>
+</html>
