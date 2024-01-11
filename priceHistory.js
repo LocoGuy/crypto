@@ -20,6 +20,7 @@ let coins = [
   "digibyte",
   "injective-protocol",
   "gmx",
+  "avalanche-2"
 ];
 
 let historyInfo = [];
