@@ -22,7 +22,8 @@ let coins = [
   "gmx",
   "avalanche-2",
   "gamer-arena",
-  "solidus-aitech"
+  "solidus-aitech",
+  "gt-protocol"
 ];
 
 let historyInfo = [];
