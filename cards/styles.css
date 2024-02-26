@@ -1,0 +1,13 @@
+#body {
+  margin: 50px;
+  font-size: large;
+  font-weight: bold;
+}
+
+.negative {
+  color: red;
+}
+
+.positive {
+  color: green;
+}
