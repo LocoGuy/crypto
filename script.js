@@ -60,6 +60,7 @@ let coins = [
   "gamer-arena",
   "solidus-aitech",
   "gt-protocol",
+  "wam"
 ];
 
 let historyInfo = [];
