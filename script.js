@@ -46,7 +46,7 @@ let coins = [
   "algorand",
   "monero",
   "solo-coin",
-  "klima-dao",
+  //"klima-dao",
   "cosmos",
   "hedera-hashgraph",
   "mobilecoin",
