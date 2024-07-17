@@ -44,7 +44,6 @@ let coins = [
   "matic-network",
   "stellar",
   "algorand",
-  "monero",
   "solo-coin",
   //"klima-dao",
   "cosmos",
