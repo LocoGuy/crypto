@@ -45,7 +45,6 @@ let coins = [
   "stellar",
   "algorand",
   "solo-coin",
-  //"klima-dao",
   "cosmos",
   "hedera-hashgraph",
   "mobilecoin",
@@ -83,15 +82,20 @@ async function fetchJson(apiUrl) {
 
 let checkBoxUseCHF;
 
-let useCHF = false;
+let useCHF = localStorage.getItem("useCHF");
 
 checkBoxUseCHF = document.getElementById("checkBoxUseCHF");
   checkBoxUseCHF.addEventListener("change", (event) => {
     useCHF = event.currentTarget.checked;
+    localStorage.setItem("useCHF",useCHF);
     RunMainScript();
     });
 
+
+
 async function RunMainScript() {
+  checkBoxUseCHF.checked = useCHF;
+  //useCHF = localStorage.getItem("useCHF");
   console.log("RunMainScript - called");
   
   await GetDataSimple();
@@ -182,9 +186,11 @@ async function GetDataSimple() {
   var vsCurrency = "usd";
   if (useCHF) vsCurrency = "chf";
 
+  //console.log(useCHF);
+
   var apiUrl = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${vsCurrency}&ids=${apiCoins}&price_change_percentage=1h%2C24h%2C7d`;
 
-  console.log("apiUrl", apiUrl);
+  //console.log("apiUrl", apiUrl);
 
   var jsonData = await fetchJson(apiUrl);
 
@@ -206,5 +212,5 @@ async function GetDataSimple() {
   //historyArray.sort((a, b) => b[1].oneHour - a[1].oneHour);
   //historyInfo = Object.fromEntries(historyArray);
 
-  console.log(historyInfo);
+  //console.log(historyInfo);
 }
