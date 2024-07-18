@@ -26,13 +26,24 @@
   <body onload="RunMainScript()">
     <!--$%adsense%$-->
     <main class="cd__main">
-      
       <div class="table-container">
-        <input type="checkbox" id="checkBoxUseCHF">
-      <span>UseCHF</span>
-      </input>
-    <p>
-        <!-- Start DEMO HTML (Use the following code into your project)-->
+        <div>
+          <input type="checkbox" id="checkBoxUseCHF" />
+          <span>UseCHF</span>
+
+          <button
+            type="button"
+            title="Refresh data"
+            class="btn btn-outline-primary btn-md"
+            onclick="RunMainScript()"
+          >
+            <i class="fa fa-refresh"></i>
+          </button>
+        </div>
+        <p>
+          <!-- Start DEMO HTML (Use the following code into your project)-->
+        </p>
+
         <table id="coinsTable" class="table table-striped" style="width: 100%">
           <thead>
             <tr>
