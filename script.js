@@ -69,7 +69,6 @@ function sleep(ms) {
 }
 
 async function fetchJson(apiUrl) {
-  //console.log(apiUrl);
   let response = await fetch(apiUrl);
   if (response.ok) {
     let json = await response.json();
@@ -82,24 +81,19 @@ async function fetchJson(apiUrl) {
 
 let checkBoxUseCHF;
 
-let useCHF = localStorage.getItem("useCHF");
+let useCHF = localStorage.getItem("useCHF") === "true";
 
 checkBoxUseCHF = document.getElementById("checkBoxUseCHF");
-  checkBoxUseCHF.addEventListener("change", (event) => {
-    useCHF = event.currentTarget.checked;
-    localStorage.setItem("useCHF",useCHF);
-    RunMainScript();
-    });
 
-
+checkBoxUseCHF.addEventListener("change", async (event) => {
+  useCHF = event.currentTarget.checked;
+  localStorage.setItem("useCHF",useCHF);
+  await RunMainScript();
+  });
 
 async function RunMainScript() {
   checkBoxUseCHF.checked = useCHF;
-  //useCHF = localStorage.getItem("useCHF");
-  console.log("RunMainScript - called");
-  
   await GetDataSimple();
-  //drawTable();
   drawDataTable();
 }
 
@@ -137,13 +131,6 @@ function AddRow(coinsTable, coinName, coinData) {
 
   var sevenDays = newRow.insertCell();
   sevenDays.innerHTML = formatPercent(coinData.sevenDays.toFixed(2));
-
-  /*
-    current: coin.current_price,
-        oneHour: coin.price_change_percentage_1h_in_currency,
-        oneDay: coin.price_change_percentage_24h_in_currency,
-        sevenDays: coin.price_change_percentage_7d_in_currency,
-        */
 }
 
 function drawTable() {
@@ -156,8 +143,7 @@ function drawTable() {
 }
 
 function drawDataTable() {
-  // Beispiel für das Hinzufügen einer Zeile mit der DataTables API
-  var table = $("#coinsTable").DataTable(); // Stelle sicher, dass dies nach der Initialisierung von DataTables aufgerufen wird
+  var table = $("#coinsTable").DataTable();
   table.clear();
   
   var currency = "$";
@@ -165,7 +151,6 @@ function drawDataTable() {
 
   Object.keys(historyInfo).forEach((coinName) => {
     var coinData = historyInfo[coinName];
-    // Angenommen, coinData ist das Objekt mit den Daten, die du hinzufügen möchtest
     var rowNode = table.row
       .add([
         '<img src="' + coinData.image + '" class="image-coin">', // Bild
@@ -186,19 +171,12 @@ async function GetDataSimple() {
   var vsCurrency = "usd";
   if (useCHF) vsCurrency = "chf";
 
-  //console.log(useCHF);
-
   var apiUrl = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${vsCurrency}&ids=${apiCoins}&price_change_percentage=1h%2C24h%2C7d`;
-
-  //console.log("apiUrl", apiUrl);
-
   var jsonData = await fetchJson(apiUrl);
 
   historyInfo = [];
 
   jsonData.forEach((coin) => {
-    //console.log(coin);
-    //historyInfo[coin.id] = {
     historyInfo[coin.symbol] = {
       image: coin.image,
       current: coin.current_price,
@@ -207,10 +185,4 @@ async function GetDataSimple() {
       sevenDays: coin.price_change_percentage_7d_in_currency,
     };
   });
-
-  //const historyArray = Object.entries(historyInfo);
-  //historyArray.sort((a, b) => b[1].oneHour - a[1].oneHour);
-  //historyInfo = Object.fromEntries(historyArray);
-
-  //console.log(historyInfo);
 }
