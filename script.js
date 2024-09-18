@@ -59,7 +59,8 @@ let coins = [
   "solidus-aitech",
   "gt-protocol",
   "wam",
-  "pepe"
+  "pepe",
+  "binancecoin"
 ];
 
 let historyInfo = [];
