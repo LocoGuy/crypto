@@ -152,19 +152,19 @@ function drawDataTable() {
   if (useCHF) currency = "Fr.";
 
   Object.keys(historyInfo).forEach((coinName) => {
+    var coinData = historyInfo[coinName];
     var oneHour = coinData.oneHour.toFixed(2);
     var oneDay = coinData.oneDay.toFixed(2);
     var sevenDays = coinData.sevenDays ? coinData.sevenDays.toFixed(2) : 0;
     
-    var coinData = historyInfo[coinName];
     var rowNode = table.row
       .add([
         '<img src="' + coinData.image + '" class="image-coin">', // Bild
         coinName.toUpperCase(), // Coin-Name
         currency + " " + coinData.current, // Aktueller Preis
-        formatPercent(coinData.oneHour.toFixed(2)), // 1h Änderung
-        formatPercent(coinData.oneDay.toFixed(2)), // 1d Änderung
-        formatPercent(coinData.sevenDays.toFixed(2)), // 7d Änderung
+        formatPercent(oneHour), // 1h Änderung
+        formatPercent(oneDay), // 1d Änderung
+        formatPercent(sevenDays), // 7d Änderung
       ])
       .draw()
       .node();
