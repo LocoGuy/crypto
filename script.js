@@ -60,7 +60,8 @@ let coins = [
   "gt-protocol",
   "wam",
   "pepe",
-  "binancecoin"
+  "binancecoin",
+  "we-love-t"
 ];
 
 let historyInfo = [];
