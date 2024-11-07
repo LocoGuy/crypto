@@ -152,6 +152,10 @@ function drawDataTable() {
   if (useCHF) currency = "Fr.";
 
   Object.keys(historyInfo).forEach((coinName) => {
+    var oneHour = coinData.oneHour.toFixed(2);
+    var oneDay = coinData.oneDay.toFixed(2);
+    var sevenDays = coinData.sevenDays ? coinData.sevenDays.toFixed(2) : 0;
+    
     var coinData = historyInfo[coinName];
     var rowNode = table.row
       .add([
