@@ -12,6 +12,7 @@ $(document).ready(function () {
       { width: "70px", targets: 4 },
       { width: "70px", targets: 5 },
     ],
+    order: [[5, "desc"]], // Sortiert die 6. Spalte absteigend
     pageLength: -1, // Setzt die initiale Seitenlänge auf "Alle"
 
     language: {
