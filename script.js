@@ -48,7 +48,6 @@ let coins = [
   "solo-coin",
   "cosmos",
   "hedera-hashgraph",
-  "mobilecoin",
   "coreum",
   "verasity",
   "xdce-crowd-sale",
@@ -62,7 +61,8 @@ let coins = [
   "wam",
   "pepe",
   "binancecoin",
-  "we-love-t"
+  "we-love-t",
+  "solana"
 ];
 
 let historyInfo = [];
