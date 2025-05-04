@@ -36,33 +36,16 @@ $(document).ready(function () {
 });
 
 let coins = [
-  "ripple",
-  "ethereum",
-  "bitcoin",
-  "energy-web-token",
-  "polkadot",
-  "chainlink",
-  "matic-network",
-  "stellar",
-  "algorand",
-  "solo-coin",
-  "cosmos",
-  "hedera-hashgraph",
-  "coreum",
-  "verasity",
-  "xdce-crowd-sale",
-  "digibyte",
-  "injective-protocol",
-  "gmx",
-  "avalanche-2",
-  "gamer-arena",
-  "solidus-aitech",
-  "gt-protocol",
-  "wam",
-  "pepe",
-  "binancecoin",
-  "we-love-t",
-  "solana"
+'bitcoin',
+'ethereum',
+'chainlink',
+'ripple',
+'Polygon-ecosystem-token',
+'stellar',
+'cosmos',
+'hedera-hashgraph',
+'avalanche-2',
+'curve-dao-token'
 ];
 
 let historyInfo = [];
