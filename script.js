@@ -40,7 +40,7 @@ let coins = [
 'ethereum',
 'chainlink',
 'ripple',
-'Polygon-ecosystem-token',
+'polygon-ecosystem-token',
 'stellar',
 'cosmos',
 'hedera-hashgraph',
