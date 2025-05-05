@@ -45,7 +45,8 @@ let coins = [
 'cosmos',
 'hedera-hashgraph',
 'avalanche-2',
-'curve-dao-token'
+'curve-dao-token',
+'andy-the-wisguy'
 ];
 
 let historyInfo = [];
