@@ -46,7 +46,8 @@ let coins = [
 'hedera-hashgraph',
 'avalanche-2',
 'curve-dao-token',
-'andy-the-wisguy'
+'andy-the-wisguy',
+'destra-network'
 ];
 
 let historyInfo = [];
